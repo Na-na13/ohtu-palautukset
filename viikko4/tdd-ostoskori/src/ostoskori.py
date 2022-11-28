@@ -49,3 +49,4 @@ class Ostoskori:
         # kukin ostos-olio siis kertoo mistä tuotteesta on kyse JA kuinka monta kappaletta kyseistä tuotetta korissa on
         tuotteet = [(ostos.tuotteen_nimi(), ostos.lukumaara()) for ostos in self.sisalto]
         return tuotteet
+        
