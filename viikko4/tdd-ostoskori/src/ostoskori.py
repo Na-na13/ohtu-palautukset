@@ -25,6 +25,7 @@ class Ostoskori:
         return yhteishinta
 
     def lisaa_tuote(self, lisattava: Tuote):
+        # lisää tuotteen
         muutos = False
         i = 0
         while i < len(self.sisalto):
@@ -42,6 +43,8 @@ class Ostoskori:
         while i < len(self.sisalto):
             if self.sisalto[i].tuote == poistettava:
                 self.sisalto[i].muuta_lukumaaraa(-1)
+                if self.sisalto[i].lukumaara() == 0:
+                    self.sisalto.pop(i)
                 break
             i += 1
 
