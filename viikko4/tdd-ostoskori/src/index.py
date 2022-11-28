@@ -13,6 +13,7 @@ def main():
     kori.lisaa_tuote(voi)
 
     print(kori.tavaroita_korissa(), 3)
+    print(kori.ostokset())
 
 if __name__ == "__main__":
     main()
