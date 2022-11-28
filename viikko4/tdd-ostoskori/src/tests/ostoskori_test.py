@@ -70,3 +70,17 @@ class TestOstoskori(unittest.TestCase):
 
         self.assertEqual(len(self.kori.ostokset()), 1)
         self.assertEqual(self.kori.tavaroita_korissa(), 2)
+
+    def test_ostoksen_poiston_jalkeen_ostosten_maara_oikein(self):
+        self.kori.lisaa_tuote(self.maito)
+        self.kori.lisaa_tuote(self.maito)
+        ostokset = self.kori.ostokset()
+
+        self.assertEqual(len(ostokset), 1)
+        self.assertEqual(ostokset[0][1], 2)
+
+        self.kori.poista_tuote(self.maito)
+        ostokset = self.kori.ostokset()
+
+        self.assertEqual(len(ostokset), 1)
+        self.assertEqual(ostokset[0][1], 1)
