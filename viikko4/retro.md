@@ -1,0 +1,4 @@
+# Retrospektiivitekniikoita
+## Start, Stop, Continue, More of, Less of Wheel
+Start, Stop, Continue, More of, Less of Wheel -tekniikan tarkoituksena on kerätä tiimiläisiltä palautetta siitä, mitä toimintatapoja olisi hyvä jatkaa ja mitä kannattaisi jollakin tavalla muuttaa tiimityön jatkuessa. Ideana tässä tekniikassa on jakaa keskusteltavat asiat tekniikan nimen mukaisesti viiteen kategoriaan: mitä aloitetaan, mitä lopetetaan, mitä jatketaan, mitä pitäisi olla enemmän ja mitä vähemmän. Käytännössä tämä voidaan toteuttaa siten, että piirretään paperille/valkotaululle/tms. iso ympyrä, joka jaetaan viiteen osaan käsiteltävien asioiden mukaan. Jokainen saa kertoa oman ajatuksensa mistä tahansa näistä kategoioista ja tämä ajatus lisätään piirrettyyn ympyrään omaan osaansa. Tiimiläiset keskustelevat ajatuksistaan ja mielipiteistään, jotta päästään yhteisymmärrykseen siitä, mitä työskentelytapoja tiimin kannattaa jatkaa, mistä luopua jne.  
+## Glad, Sad, Mad
