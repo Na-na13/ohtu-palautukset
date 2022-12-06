@@ -6,6 +6,7 @@ class Operaatio:
     def suorita(self):
         print("operaatio")
 
+
 class Summa(Operaatio):
     def __init__(self, sovellus, syote):
         super().__init__(sovellus, syote)
@@ -40,4 +41,4 @@ class Kumoa(Operaatio):
         super().__init__(sovellus, syote)
 
     def suorita(self):
-        pass
+        self._sovellus.aseta_arvo()
