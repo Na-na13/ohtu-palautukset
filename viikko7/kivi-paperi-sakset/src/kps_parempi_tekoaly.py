@@ -1,29 +1,24 @@
-from tuomari import Tuomari
 from tekoaly_parannettu import TekoalyParannettu
+from kps_peli import KiviPaperiSakset
 
 
-class KPSParempiTekoaly:
-    def pelaa(self):
-        tuomari = Tuomari()
-        tekoaly = TekoalyParannettu(10)
+class KPSParempiTekoaly(KiviPaperiSakset):
+    def __init__(self):
+        super().__init__()
+        self._tekoaly = TekoalyParannettu(10)
+        self._aloitussiirto = True
+        self._ekan_edellinen = ""
 
+    def _ekan_siirto(self):
         ekan_siirto = input("Ensimmäisen pelaajan siirto: ")
-        tokan_siirto = tekoaly.anna_siirto()
+        self._ekan_edellinen = ekan_siirto
+        if self._aloitussiirto == True:
+            self._aloitussiirto == False
+        return ekan_siirto
 
+    def _tokan_siirto(self):
+        tokan_siirto = self._tekoaly.anna_siirto()
         print(f"Tietokone valitsi: {tokan_siirto}")
-
-        while self._onko_ok_siirto(ekan_siirto) and self._onko_ok_siirto(tokan_siirto):
-            tuomari.kirjaa_siirto(ekan_siirto, tokan_siirto)
-            print(tuomari)
-
-            ekan_siirto = input("Ensimmäisen pelaajan siirto: ")
-            tokan_siirto = tekoaly.anna_siirto()
-
-            print(f"Tietokone valitsi: {tokan_siirto}")
-            tekoaly.aseta_siirto(ekan_siirto)
-
-        print("Kiitos!")
-        print(tuomari)
-
-    def _onko_ok_siirto(self, siirto):
-        return siirto == "k" or siirto == "p" or siirto == "s"
+        if self._aloitussiirto == False:
+            self._tekoaly.aseta_siirto(self._ekan_edellinen)
+        return tokan_siirto
